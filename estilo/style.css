@@ -1,0 +1,95 @@
+
+*{
+    background-color: antiquewhite;
+    
+        padding: 0;
+        margin: 0;
+    
+    
+}
+#cabecera{
+    max-width: 300px;
+    margin: 20px;
+    display: flex;
+}
+#img-cabecera{
+    max-height: 200px;
+    width: 500px;
+    
+}
+
+#parrafoCabecera{
+    float: left;
+    margin-left: 90%;
+    font-size: xx-large;
+    margin-top: 30%;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.menu {
+    width: 600px;
+    margin-left: 600px;
+    background-color: #9CAF88;
+}
+
+/* 
+- Quitar los puntos  de la lista.
+*/
+ul, li {
+    list-style: none;
+}
+
+/* 
+Estilos para los enlaces dentro del menú:
+- Eliminar el subrayado de los enlaces.
+- Añadir relleno para hacer los enlaces más grandes.
+- Hacer que los enlaces ocupen el ancho completo del elemento <li>.
+*/
+.menu li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* 
+Estilos para los elementos <li> del menú principal:
+- Alinear los elementos horizontalmente.
+- Hacer que los submenús se posicionen de manera relativa.
+*/
+.menu > li {
+    float: left;
+    position: relative; /* Necesario para posicionar los submenús */
+}
+
+/* 
+Estilos generales para los enlaces del menú:
+- Cambiar el color del texto
+- Establecer un color de fondo 
+*/
+.menu a {
+    color: #7A6C5D;
+    background-color: #9CAF88;
+}
+
+/* 
+Estilos para los submenús:
+- Ocultar el submenú por defecto.
+- Posicionarlo justo debajo del elemento padre.
+- Asignar un índice z para asegurarse de que se muestre por encima de otros elementos.
+*/
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    padding: 10px;
+}
+
+/* 
+Mostrar el submenú cuando se pasa el ratón por encima del elemento padre.
+*/
+.menu li:hover > ul {
+    display: block;
+}
